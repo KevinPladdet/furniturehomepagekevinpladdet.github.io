@@ -1,0 +1,190 @@
+    *
+    {
+    
+      padding: 0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    section 
+    {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr 2fr;
+      grid-template-rows: 5fr 1fr 3fr;
+      grid-template-areas: 
+        "pic1 pic1 txt1 txt1"
+        "pic1 pic1 bttn ."
+        "pic2 txt2 txt2 pic3"
+      ;
+    }
+    #pic1 
+    {
+      grid-area: pic1;  
+    }
+    #pic2 
+    {
+      grid-area: pic2;  
+    }
+    #pic3 
+    {
+      grid-area: pic3;  
+    }
+    #txt1 
+    {
+      grid-area: txt1;
+      padding-top: 15%;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+    #txt2 
+    {
+      grid-area: txt2;
+      padding-top: 8%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    #bttn
+    {
+      grid-area: bttn;
+    }
+    .imagebackground
+    {
+      background-image: url("images/desktop-hero-1.jpg");
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-size: cover;
+    }
+    .imagebackgroundTwo
+    {
+      background-image: url("images/image-about_dark.jpg");
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-size: cover;
+    }
+    .imagebackgroundThree
+    {
+      background-image: url("images/image-about_light.jpg");
+      background-repeat: no-repeat;
+      background-position: center; 
+      background-size: cover;
+    }
+    .buttoncolor
+    {
+      background-color: black;
+      color: #8c8c8c;;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+      transition-duration: .2s;
+    }
+    .buttoncolor:hover
+    {
+      background-color: #1a1a1a;
+      transition-duration: .2s;
+    }
+    .buttonFlex
+    {
+      display: flex;
+      flex-direction: row;
+    }
+    .colorgrey
+    {
+      color: #8c8c8c;
+    }
+    .colorwhite
+    {
+      color:rgb(255, 255, 255);
+    }
+    .textfont
+    {
+      font-family: 'League Spartan', sans-serif;
+    }
+    .menuText
+    {
+      display: inline;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width:1025px) /* PC/Laptop */
+    {
+        .mobileSmaller
+        {
+            font-size:x-large;
+        }
+
+        .mobileSmallerTwo
+        {
+            font-size: 43px;
+            line-height: 42px;
+        }
+
+        .menuText
+        {
+            position: absolute;
+            top: 50px;
+            padding-left: 197px;
+        }
+    }
+
+    @media (max-width:1024px) /* iPad / Tablet / Phone */
+    {
+        section 
+        {
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            "pic1"
+            "txt1"
+            "bttn"
+            "pic2"
+            "txt2"
+            "pic3"
+            ;
+        }
+
+        .menuText
+        {
+            position: absolute;
+            top: 50px;
+            padding-left: 45px;
+        }
+
+        #pic1
+        {
+            height: 50vh;
+        }
+
+        #pic2
+        {
+            height: 50vh;
+        }
+
+        #pic3
+        {
+            height: 50vh;
+        }
+
+        .mobileSmaller
+        {
+            font-size:larger;
+        }
+
+        .mobileSmallerTwo
+        {
+            font-size: 30px;
+        }
+
+        .addPaddingMobile
+        {
+            padding-bottom: 35px;
+        }
+
+        .buttonFlex
+        {
+            display: none;
+        }
+    }
